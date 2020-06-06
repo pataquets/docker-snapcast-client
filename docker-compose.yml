@@ -1,0 +1,12 @@
+version: "2.4"
+services:
+  snapclient:
+    image: pataquets/snapcast-client
+    command:
+      - "--host"
+      - "${SNAPCLIENT_HOST?No server host provided}"
+      - "--latency"
+      - "${SNAPCLIENT_LATENCY:-0}"
+    devices:
+      - /dev/snd
+    network_mode: host
