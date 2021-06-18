@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM pataquets/ubuntu:focal
 
 RUN \
   apt-get update && \
